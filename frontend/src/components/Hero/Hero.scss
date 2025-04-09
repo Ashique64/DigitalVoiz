@@ -1,0 +1,33 @@
+#hero {
+    .hero-row {
+        .hero_col-1 {
+            .content_section {
+                .content-wrapper {
+                    .subtitle {
+                        font-family: var(--sub-title);
+                        letter-spacing: 2px;
+                        display: inline-block;
+
+                        &::before {
+                            content: "";
+                            width: 18px;
+                            height: 18px;
+                            margin-right: 6px;
+                            border-radius: 50%;
+                            background-color: var(--accent-color);
+                            display: inline-block;
+                        }
+                    }
+
+                    .title {
+                        font-family: var(--title);
+                    }
+
+                    a {
+                        font-family: var(--title);
+                    }
+                }
+            }
+        }
+    }
+}
