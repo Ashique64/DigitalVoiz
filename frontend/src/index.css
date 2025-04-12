@@ -29,3 +29,9 @@ body {
   --third-color: #7209b7;
   --fourth-color: #3a0ca3;
 } */
+
+
+::selection {
+    background: var(--accent-color);
+    color: var(--primary-color);
+}
