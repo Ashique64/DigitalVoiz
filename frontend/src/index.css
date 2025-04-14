@@ -16,20 +16,6 @@ body {
     --title: "Oswald", sans-serif;
 }
 
-/* #root {
-  --primary-color: #f8f9fa;
-  --secondary-color: #e9ecef;
-  --third-color: #4361ee;
-  --fourth-color: #212529;
-} */
-
-/* #root {
-  --primary-color: #ffffff;
-  --secondary-color: #f8f9fa;
-  --third-color: #7209b7;
-  --fourth-color: #3a0ca3;
-} */
-
 
 ::selection {
     background: var(--accent-color);

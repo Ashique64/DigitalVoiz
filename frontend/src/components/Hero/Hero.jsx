@@ -1,19 +1,38 @@
 import React from "react";
+import { motion } from "framer-motion";
 import "./Hero.scss";
 
 const Hero = () => {
+    const title = "Transforming Your Visions  into Digital Reality";
+
     return (
-        <div id="hero" className="hero min-w-full min-h-screen py-4 flex align-center">
-            <div className="hero-row mx-auto flex flex-col-reverse md:flex-row md:ps-8 pe-3 sm:ps-3">
-                <div className="hero_col-1 w-full xl:w-1/2 md:w-1/2 px-3">
+        <div id="hero" className="hero min-w-full bg-[var(--secondary-color)] min-h-screen py-4 flex align-center">
+            <div className="hero-row mx-auto flex flex-col-reverse md:flex-row md:ps-8 md:pe-8 sm:pe-3 sm:ps-3">
+                {/* <div className="shape-1"></div> */}
+                <div
+                    className="hero_col-1 w-full xl:w-1/2 md:w-1/2 px-3"
+                    data-aos="fade-up"
+                    data-aos-duration="1500"
+                    data-aos-offset="200"
+                    data-aos-easing="ease-in-out"
+                >
                     <div className="content_section flex items-center h-full">
                         <div className="content-wrapper h-full w-full flex flex-col justify-center">
                             <h4 className="subtitle md:text-2xl font-bold text-[var(--accent-color)] my-1 xl:my-2 md:my-2">
                                 Welcome to Digital<span>Voiz</span>
                             </h4>
-                            <h1 className="title text-2xl sm:text-3xl xl:text-5xl md:text-4xl font-bold text-[var(--text-color)] tracking-[1.2px] md:leading-14 my-3 xl:my-5 md:my-4">
-                                Transforming Your Visions into Digital Reality
-                            </h1>
+                            <motion.h1 className="title text-2xl sm:text-3xl xl:text-5xl md:text-4xl font-bold text-[var(--text-color)] tracking-[1.2px] md:leading-14 my-3 xl:my-5 md:my-4 flex flex-wrap">
+                                {title.split("").map((char, index) => (
+                                    <motion.span
+                                        key={index}
+                                        initial={{ opacity: 0, y: 20 }}
+                                        animate={{ opacity: 1, y: 0 }}
+                                        transition={{ delay: index * 0.03 }}
+                                    >
+                                        {char === " " ? "\u00A0" : char}
+                                    </motion.span>
+                                ))}
+                            </motion.h1>
                             <p className="text-[var(--para-color)] italic mb-2 xl:text-lg md:text-base sm:text-sm">
                                 Your trusted partner for scalable IT solutions. We combine strategy, technology, and passion
                                 to turn challenges into opportunities—helping your business thrive in the digital age.
@@ -28,7 +47,13 @@ const Hero = () => {
                     </div>
                 </div>
 
-                <div className="hero_col-2 w-full  h-full xl:w-1/2 md:w-1/2 px-3">
+                <div
+                    className="hero_col-2 w-full h-full xl:w-1/2 md:w-1/2 px-3"
+                    data-aos="fade-down"
+                    data-aos-duration="1500"
+                    data-aos-offset="200"
+                    data-aos-easing="ease-in-out"
+                >
                     <div className="image_section flex justify-center items-center h-full">
                         <svg width="274" height="285" viewBox="0 0 274 285" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path
